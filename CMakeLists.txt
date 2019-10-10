@@ -1,33 +1,29 @@
 cmake_minimum_required(VERSION 3.2)
 
 project(print_ip VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
-#project(print_ip VERSION 0.0.1)
-
-find_package(Boost COMPONENTS unit_test_framework REQUIRED)
+# project(print_ip VERSION 0.0.1)
 
 configure_file(version.h.in version.h)
 
-add_executable(print_ip_cli main.cpp)
-add_library(helloworld lib.cpp)
-add_executable(test_version test_version.cpp)
+find_package(GTest REQUIRED)
 
-set_target_properties(print_ip_cli helloworld test_version PROPERTIES
+add_executable(print_ip_cli main.cpp)
+add_executable(test_printIP test_printIP.cpp)
+
+add_library(helloworld lib.cpp)
+
+
+set_target_properties(print_ip_cli helloworld test_printIP PROPERTIES
     CXX_STANDARD 14
     CXX_STANDARD_REQUIRED ON
 )
 target_include_directories(helloworld
     PRIVATE "${CMAKE_BINARY_DIR}"
 )
-set_target_properties(test_version PROPERTIES
-    COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK
-    INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
+target_link_libraries(
+    test_printIP ${GTEST_LIBRARIES} gtest_main Threads::Threads
 )
-
 target_link_libraries(print_ip_cli PRIVATE
-    helloworld
-)
-target_link_libraries(test_version
-    ${Boost_LIBRARIES}
     helloworld
 )
 
@@ -38,7 +34,7 @@ if (MSVC)
     target_compile_options(helloworld PRIVATE
         /W4
     )
-    target_compile_options(test_version PRIVATE
+    target_compile_options(test_printIP PRIVATE
         /W4
     )
 else ()
@@ -48,7 +44,7 @@ else ()
     target_compile_options(helloworld PRIVATE
         -Wall -Wextra -pedantic -Werror
     )
-    target_compile_options(test_version PRIVATE
+    target_compile_options(test_printIP PRIVATE
         -Wall -Wextra -pedantic -Werror
     )
 endif()
@@ -69,4 +65,4 @@ include(CPack)
 
 enable_testing()
 
-add_test(test_version test_version)
+add_test(test_printIP test_printIP)
