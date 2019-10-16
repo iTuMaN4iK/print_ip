@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/travis/build/iTuMaN4iK/print_ip/include.h
+iostream
+-
+list
+-
+string
+-
+type_traits
+-
+vector
+-
+
+/home/travis/build/iTuMaN4iK/print_ip/lib.h
+
+/home/travis/build/iTuMaN4iK/print_ip/main.cpp
+include.h
+/home/travis/build/iTuMaN4iK/print_ip/include.h
+lib.h
+/home/travis/build/iTuMaN4iK/print_ip/lib.h
+iostream
+-
+

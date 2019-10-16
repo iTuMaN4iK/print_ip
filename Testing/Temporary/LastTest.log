@@ -1,0 +1,41 @@
+Start testing: Oct 16 17:52 UTC
+----------------------------------------------------------
+1/1 Testing: test_printIP
+1/1 Test: test_printIP
+Command: "/home/travis/build/iTuMaN4iK/print_ip/test_printIP"
+Directory: /home/travis/build/iTuMaN4iK/print_ip
+"test_printIP" start time: Oct 16 17:52 UTC
+Output:
+----------------------------------------------------------
+Running main() from gtest_main.cc
+[==========] Running 7 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 7 tests from printIP
+[ RUN      ] printIP.typeChar
+[       OK ] printIP.typeChar (0 ms)
+[ RUN      ] printIP.typeShor
+[       OK ] printIP.typeShor (0 ms)
+[ RUN      ] printIP.typeInt
+[       OK ] printIP.typeInt (0 ms)
+[ RUN      ] printIP.typeLong
+[       OK ] printIP.typeLong (0 ms)
+[ RUN      ] printIP.typeString
+[       OK ] printIP.typeString (0 ms)
+[ RUN      ] printIP.typeList
+[       OK ] printIP.typeList (0 ms)
+[ RUN      ] printIP.typeVector
+[       OK ] printIP.typeVector (0 ms)
+[----------] 7 tests from printIP (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 1 test case ran. (1 ms total)
+[  PASSED  ] 7 tests.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"test_printIP" end time: Oct 16 17:52 UTC
+"test_printIP" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 16 17:52 UTC

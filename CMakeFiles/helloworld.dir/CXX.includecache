@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/travis/build/iTuMaN4iK/print_ip/lib.cpp
+lib.h
+/home/travis/build/iTuMaN4iK/print_ip/lib.h
+version.h
+/home/travis/build/iTuMaN4iK/print_ip/version.h
+
+/home/travis/build/iTuMaN4iK/print_ip/lib.h
+
+/home/travis/build/iTuMaN4iK/print_ip/version.h
+
