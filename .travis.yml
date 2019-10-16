@@ -1,4 +1,8 @@
 language: cpp
+addons:
+  apt:
+    packages:
+      - doxygen
 before_script:
 - sudo apt-get install libgtest-dev -y
 - sudo apt-get install cmake
